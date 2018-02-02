@@ -1,0 +1,6 @@
+<mat-list role="list" *ngFor="let user of users | searchFilter : filter; last as last; let i = index">
+  <mat-list-item>
+    <app-users-list-user-bar [user]="user" (removeUserEvent)="removeUser($event)"></app-users-list-user-bar>
+  </mat-list-item>
+  <mat-divider *ngIf="!last"></mat-divider>
+</mat-list>

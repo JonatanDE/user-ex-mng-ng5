@@ -1,0 +1,9 @@
+@import '~styles/main';
+
+.mat-toolbar {
+  justify-content: space-between;
+
+  .title {
+    flex: 1;
+  }
+}

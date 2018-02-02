@@ -1,0 +1,7 @@
+<app-users-list-toolbar>
+</app-users-list-toolbar>
+<div class="users-list">
+  <app-users-list-search-bar (search)="filterUsers($event)"></app-users-list-search-bar>
+  <app-users-list-container [users]="users$ | async" [filter]="searchText" (deleteUser)="deleteUser($event)"></app-users-list-container>
+</div>
+<app-user-create (userDataEvent)="createNewUser($event)"></app-user-create>

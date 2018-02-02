@@ -1,0 +1,41 @@
+@import '~styles/main';
+
+:host {
+  width: 100%;
+}
+
+.user-avatar {
+  float: left;
+  background: $grey-light;
+  border-radius: 50%;
+
+  .mat-list-icon {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+
+
+.user-info {
+  margin-left: 64px;
+  display: flex;
+  align-items: center;
+
+  &-name {
+    flex: 2;
+
+    &--email {
+      padding-top: 5px;
+    }
+  }
+
+  &-date {
+    flex: 1;
+  }
+}
+
+::ng-deep {
+  .mat-divider {
+    margin-left: 80px !important;
+  }
+}

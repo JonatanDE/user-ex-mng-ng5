@@ -1,0 +1,39 @@
+@import '~styles/main';
+
+::ng-deep {
+  .white-icon {
+    svg {
+      fill: $white;
+    }
+  }
+
+  .grey-icon {
+    svg {
+      fill: $grey-icon;
+    }
+  }
+
+  .flex {
+    display: flex;
+
+    &-grow {
+      flex: 1;
+    }
+  }
+
+  .push-r20 {
+    padding-right: 20px;
+  }
+
+  .push-l20 {
+    padding-left: 20px;
+  }
+
+  .f-right {
+    float: right;
+  }
+
+  .mat-toolbar-single-row {
+    box-shadow: $shadow;
+  }
+}

@@ -1,0 +1,13 @@
+@import '~styles/main';
+
+.mat-list-item {
+  width: 200px
+}
+
+.mat-icon {
+  padding-right: 15px;
+}
+
+.active {
+  background: $grey-light;
+}

@@ -1,0 +1,23 @@
+<div class="user-avatar">
+  <mat-icon svgIcon="ic-person" mat-list-icon class="grey-icon"></mat-icon>
+</div>
+
+<div class="user-info">
+  <div class="user-info-name">
+    <b>{{user.fullName}}</b>
+    <div class="user-info-name--email">{{user.email}}</div>
+  </div>
+
+  <div class="user-info-date"> {{user.date | date}} </div>
+
+  <div class="user-info-menu">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon svgIcon="ic-more-vert" class="grey-icon"></mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="removeUser(user.id)">
+        <span>Remove user</span>
+      </button>
+    </mat-menu>
+  </div>
+</div>

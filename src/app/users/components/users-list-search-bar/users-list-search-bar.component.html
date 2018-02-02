@@ -1,0 +1,4 @@
+<mat-form-field>
+  <mat-icon svgIcon="ic-search" matPrefix></mat-icon>
+  <input type="text" matInput placeholder="Search by Full name or Email" [value]="query" (keyup)="search.emit($event.target.value)">
+</mat-form-field>

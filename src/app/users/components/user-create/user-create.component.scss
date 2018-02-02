@@ -1,0 +1,17 @@
+@import '~styles/main';
+
+.mat-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: $orange !important;
+}
+
+::ng-deep {
+  .mat-fab {
+    .mat-button-wrapper {
+      font-size: 40px;
+      line-height: 0.25 !important;
+    }
+  }
+}
