@@ -2,6 +2,13 @@
 </app-users-list-toolbar>
 <div class="users-list">
   <app-users-list-search-bar (search)="filterUsers($event)"></app-users-list-search-bar>
-  <app-users-list-container [users]="users$ | async" [filter]="searchText" (deleteUser)="deleteUser($event)"></app-users-list-container>
+  <app-users-list-container>
+    <mat-list role="list" *ngFor="let user of users$ | async | searchFilter:searchText; last as last; let i = index">
+      <mat-list-item>
+        <app-users-list-user-bar [user]="user" (removeUserEvent)="deleteUser(user.id)"></app-users-list-user-bar>
+      </mat-list-item>
+      <mat-divider *ngIf="!last"></mat-divider>
+    </mat-list>
+  </app-users-list-container>
 </div>
 <app-user-create (userDataEvent)="createNewUser($event)"></app-user-create>

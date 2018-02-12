@@ -6,15 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./users-list-container.component.scss']
 })
 export class UsersListContainerComponent implements OnInit {
-  @Input() public users;
-  @Input() public filter;
-  @Output() public deleteUser = new EventEmitter<number>();
-
   constructor() {}
 
   ngOnInit() {}
-
-  public removeUser(id) {
-    this.deleteUser.emit(id);
-  }
 }
